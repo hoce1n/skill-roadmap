@@ -1,0 +1,40 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Unlock · Skill Roadmap Tracker",
+      "hasCanvas": false,
+      "bodyTextLen": 201,
+      "bodyTextHash": "29cd14134850a11b4b6888615cb0eb1923c46ce8fea6c97c341227454423fc46",
+      "bodyTextPrefix": "full-stack-skill-roadmap-en.md Skill Roadmap Choose a passcode f",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Unlock · Skill Roadmap Tracker",
+      "hasCanvas": false,
+      "bodyTextLen": 201,
+      "bodyTextHash": "29cd14134850a11b4b6888615cb0eb1923c46ce8fea6c97c341227454423fc46",
+      "bodyTextPrefix": "full-stack-skill-roadmap-en.md Skill Roadmap Choose a passcode f",
+      "horizontalOverflow": false,
+      "consoleErrors": [
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <MatchImpl routeId=\"/unlock\">\n      <MatchView router={{...}} match={{id:\"/unloc...\", ...}}>\n        <SafeFragment>\n          <SafeFragment fallback={null}>\n            <CatchBoundary getResetKey={function getResetKey} errorComponent={function AppErrorComponent} ...>\n              <SafeFragment fallback={function fallback}>\n                <MatchInnerImpl match={{id:\"/unloc...\", ...}}>\n                  <Lazy>\n                    <UnlockPage>\n                      <UnlockForm initial={{...}}>\n                        <main className=\"flex min-h...\">\n                          <div className=\"w-full max...\">\n                            <p>\n                            <h1>\n                            <p>\n                            <form onSubmit={function onSubmit} className=\"flex flex-...\">\n                              <label className=\"flex flex-...\">\n                                <span>\n                                <input\n                                  type=\"password\"\n                                  name=\"passcode\"\n                                  autoComplete=\"new-password\"\n                                  value=\"\"\n                                  onChange={function onChange}\n                                  minLength={4}\n                                  required={true}\n                                  className=\"min-h-11 border border-rule bg-bg px-3 text-fg\"\n-                                 style={{caret-color:\"transparent\"}}\n                                >\n                              <label className=\"flex flex-...\">\n                                <span>\n                                <input\n                                  type=\"password\"\n                                  name=\"confirm\"\n                                  autoComplete=\"new-password\"\n                                  value=\"\"\n                                  onChange={function onChange}\n                                  minLength={4}\n                                  required={true}\n                                  className=\"min-h-11 border border-rule bg-bg px-3 text-fg\"\n-                                 style={{caret-color:\"transparent\"}}\n                                >\n                              ...\n"
+      ],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [
+    "BRAND NOTE: no custom public/og.jpg — the platform will serve the og.grok.me placeholder. Custom cards are the default for games of every kind (DOM board/word games included), whimsical apps, creative tools, and brand-forward pages — only plain utilities (converters, CRUD trackers, admin dashboards) keep the placeholder. If this app is not a plain utility, finish the brand-asset pass per /workspace/.grok/skills/og/SKILL.md."
+  ],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
