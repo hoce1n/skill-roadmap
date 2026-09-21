@@ -1,7 +1,7 @@
 // @ts-check
 /**
- * Full-stack skill roadmap seed. Section 25 (Learning Priority) is omitted —
- * it only drives default tiers. Section 26 is included.
+ * Full-stack skill roadmap seed. Source section 25 is omitted — it only drives
+ * default tiers. Job Readiness Criteria remains the final imported section.
  *
  * Per-item Medium overrides (even when the parent section is higher):
  *   WebSockets Basics, OpenAPI and Swagger Basics, Background Jobs Basics,
@@ -21,147 +21,7 @@
 /** @type {RoadmapSection[]} */
 export const ROADMAP = [
   {
-    section: "1. HTML and CSS",
-    tier: null,
-    groups: [
-      {
-        subsection: "HTML",
-        items: [
-          "HTML document outline: doctype, html, head, body",
-          "Semantic landmarks: header, nav, main, article, aside, footer",
-          "Headings h1–h6 as a real outline, not for size",
-          "Paragraphs, lists, blockquote, pre, code, hr",
-          "Links: href, download, mailto, target and when not to use it",
-          "Images: src, alt, width/height, srcset and sizes",
-          "Picture element and art direction",
-          "Audio and video elements, captions track",
-          "Tables: caption, thead, tbody, th scope, col",
-          "Forms: form, fieldset, legend, label for/id pairing",
-          "Input types: text, email, url, number, date, file, checkbox, radio, hidden",
-          "Select, textarea, datalist, output, progress, meter",
-          "Button types: submit, reset, button — and default type gotchas",
-          "Required, disabled, readonly, minlength, pattern, autocomplete",
-          "Details/summary, dialog, and native popover",
-          "Iframe basics, sandbox, and why title matters",
-          "Meta tags: charset, viewport, description, robots",
-          "Favicon, apple-touch-icon, and theme-color",
-          "Language and dir attributes",
-          "Custom data attributes vs. proper attributes",
-          "HTML validation (W3C) and common parser quirks",
-        ],
-      },
-      {
-        subsection: "CSS",
-        items: [
-          "The cascade, origin, importance, and layer (@layer)",
-          "Specificity: inline, id, class, type, :where vs :is",
-          "Inheritance and the inherit / initial / unset / revert keywords",
-          "Box model: content, padding, border, margin, box-sizing",
-          "Display: block, inline, inline-block, none, contents",
-          "Flow layout, formatting contexts, and margin collapse",
-          "Position: static, relative, absolute, fixed, sticky",
-          "Z-index, stacking contexts, and isolation",
-          "Overflow, scroll snapping, and scrollbar styling",
-          "Units: px, rem, em, %, vh/vw, dvh, ch, lh, svh",
-          "Colors: hex, rgb, hsl, oklch, currentColor, color-mix",
-          "Custom properties (CSS variables) and fallbacks",
-          "Typography: font-family, font-face, font-display, line-height, letter-spacing",
-          "System font stacks vs. variable fonts vs. Google Fonts",
-          "Text wrapping: overflow-wrap, line-break, text-wrap balance/pretty",
-          "Lists, counters, and generated content",
-          "Backgrounds, gradients (quietly), and background-size",
-          "Borders, outline vs. border, border-image (when to skip)",
-          "Border-radius and concentric inner radii",
-          "Box-shadow and text-shadow — hairlines, not glow soup",
-          "Transforms: translate, scale, rotate, transform-origin",
-          "Transitions on specific properties only (never all)",
-          "Keyframe animations reserved for one-shot sequences",
-          "prefers-reduced-motion and prefers-color-scheme",
-          "Cursor, user-select, pointer-events, touch-action",
-        ],
-      },
-      {
-        subsection: "Layout",
-        items: [
-          "Flexbox: axis, wrap, justify, align, gap, flex shorthand",
-          "Flex: shrinking, growing, and min-width: auto gotchas",
-          "CSS Grid: tracks, areas, auto-fit/auto-fill, minmax, subgrid",
-          "Grid vs. flex: pick one per layout problem",
-          "Multicolumn layout and when not to use it",
-          "Container queries and container query units",
-          "Media queries: width, hover, pointer, resolution",
-          "Mobile-first breakpoints and content-driven widths",
-          "Logical properties: inset, margin-inline, padding-block",
-          "Aspect-ratio and object-fit for media",
-          "Sticky headers and scroll-padding for in-page anchors",
-          "Holy-grail / sidebar + main layouts without hacks",
-        ],
-      },
-      {
-        subsection: "Responsive and Polish",
-        items: [
-          "Responsive images that do not layout-shift",
-          "Fluid type with clamp()",
-          "Spacing scale (4/8) instead of magic numbers",
-          "Dark mode with custom properties, not a second stylesheet",
-          "Print styles: hide chrome, show URLs, page-break",
-          "Focus-visible rings that meet contrast",
-          "Hit targets ≥ 44px on touch (padding, not just icon size)",
-          "Horizontal overflow hunting on 390px viewports",
-        ],
-      },
-    ],
-  },
-  {
-    section: "2. Supporting Tools",
-    tier: null,
-    groups: [
-      {
-        subsection: "Editor",
-        items: [
-          "VS Code (or equivalent) as daily driver",
-          "Command palette, multi-cursor, and jump-to-definition",
-          "Format on save with a project formatter",
-          "EditorConfig so tabs/newlines match the repo",
-          "Emmet for HTML/CSS, then knowing when to stop",
-          "Snippets for the few patterns you actually type",
-          "Integrated terminal and tasks",
-          "Extensions: ESLint, Prettier, Tailwind IntelliSense, Prisma, Pretty TS Errors",
-          "Disable noisy extensions; keep the editor fast",
-        ],
-      },
-      {
-        subsection: "Browser DevTools",
-        items: [
-          "Elements panel: inspect, force state, edit HTML/CSS live",
-          "Computed styles vs. authored styles",
-          "Box model overlay and grid/flex inspector",
-          "Console: log, table, assert, copy, $0",
-          "Network: waterfall, headers, preview, disable cache, throttling",
-          "Application: cookies, local/session storage, cache storage",
-          "Sources: breakpoints, conditional breakpoints, blackboxing",
-          "Performance panel: record, FPS, long tasks",
-          "Lighthouse and what each category actually means",
-          "Accessibility tree and contrast checker",
-          "Responsive design mode and device emulation caveats",
-        ],
-      },
-      {
-        subsection: "Package Managers and CLI",
-        items: [
-          "npm vs. pnpm vs. yarn — lockfiles and why they matter",
-          "package.json scripts, engines, and sideEffects",
-          "npx / pnpx for one-off tools",
-          "Semver: caret, tilde, exact, and peer dependencies",
-          "Updating deps without surprise major bumps",
-          "Reading a README and changelog before adding a library",
-          "Why not to commit node_modules",
-        ],
-      },
-    ],
-  },
-  {
-    section: "3. Deep JavaScript",
+    section: "1. Deep JavaScript",
     tier: "Very High",
     groups: [
       {
@@ -259,7 +119,7 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "4. TypeScript",
+    section: "2. TypeScript",
     tier: "Very High",
     groups: [
       {
@@ -310,7 +170,99 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "5. React",
+    section: "3. HTML and CSS",
+    tier: null,
+    groups: [
+      {
+        subsection: "HTML",
+        items: [
+          "HTML document outline: doctype, html, head, body",
+          "Semantic landmarks: header, nav, main, article, aside, footer",
+          "Headings h1–h6 as a real outline, not for size",
+          "Paragraphs, lists, blockquote, pre, code, hr",
+          "Links: href, download, mailto, target and when not to use it",
+          "Images: src, alt, width/height, srcset and sizes",
+          "Picture element and art direction",
+          "Audio and video elements, captions track",
+          "Tables: caption, thead, tbody, th scope, col",
+          "Forms: form, fieldset, legend, label for/id pairing",
+          "Input types: text, email, url, number, date, file, checkbox, radio, hidden",
+          "Select, textarea, datalist, output, progress, meter",
+          "Button types: submit, reset, button — and default type gotchas",
+          "Required, disabled, readonly, minlength, pattern, autocomplete",
+          "Details/summary, dialog, and native popover",
+          "Iframe basics, sandbox, and why title matters",
+          "Meta tags: charset, viewport, description, robots",
+          "Favicon, apple-touch-icon, and theme-color",
+          "Language and dir attributes",
+          "Custom data attributes vs. proper attributes",
+          "HTML validation (W3C) and common parser quirks",
+        ],
+      },
+      {
+        subsection: "CSS",
+        items: [
+          "The cascade, origin, importance, and layer (@layer)",
+          "Specificity: inline, id, class, type, :where vs :is",
+          "Inheritance and the inherit / initial / unset / revert keywords",
+          "Box model: content, padding, border, margin, box-sizing",
+          "Display: block, inline, inline-block, none, contents",
+          "Flow layout, formatting contexts, and margin collapse",
+          "Position: static, relative, absolute, fixed, sticky",
+          "Z-index, stacking contexts, and isolation",
+          "Overflow, scroll snapping, and scrollbar styling",
+          "Units: px, rem, em, %, vh/vw, dvh, ch, lh, svh",
+          "Colors: hex, rgb, hsl, oklch, currentColor, color-mix",
+          "Custom properties (CSS variables) and fallbacks",
+          "Typography: font-family, font-face, font-display, line-height, letter-spacing",
+          "System font stacks vs. variable fonts vs. Google Fonts",
+          "Text wrapping: overflow-wrap, line-break, text-wrap balance/pretty",
+          "Lists, counters, and generated content",
+          "Backgrounds, gradients (quietly), and background-size",
+          "Borders, outline vs. border, border-image (when to skip)",
+          "Border-radius and concentric inner radii",
+          "Box-shadow and text-shadow — hairlines, not glow soup",
+          "Transforms: translate, scale, rotate, transform-origin",
+          "Transitions on specific properties only (never all)",
+          "Keyframe animations reserved for one-shot sequences",
+          "prefers-reduced-motion and prefers-color-scheme",
+          "Cursor, user-select, pointer-events, touch-action",
+        ],
+      },
+      {
+        subsection: "Layout",
+        items: [
+          "Flexbox: axis, wrap, justify, align, gap, flex shorthand",
+          "Flex: shrinking, growing, and min-width: auto gotchas",
+          "CSS Grid: tracks, areas, auto-fit/auto-fill, minmax, subgrid",
+          "Grid vs. flex: pick one per layout problem",
+          "Multicolumn layout and when not to use it",
+          "Container queries and container query units",
+          "Media queries: width, hover, pointer, resolution",
+          "Mobile-first breakpoints and content-driven widths",
+          "Logical properties: inset, margin-inline, padding-block",
+          "Aspect-ratio and object-fit for media",
+          "Sticky headers and scroll-padding for in-page anchors",
+          "Holy-grail / sidebar + main layouts without hacks",
+        ],
+      },
+      {
+        subsection: "Responsive and Polish",
+        items: [
+          "Responsive images that do not layout-shift",
+          "Fluid type with clamp()",
+          "Spacing scale (4/8) instead of magic numbers",
+          "Dark mode with custom properties, not a second stylesheet",
+          "Print styles: hide chrome, show URLs, page-break",
+          "Focus-visible rings that meet contrast",
+          "Hit targets ≥ 44px on touch (padding, not just icon size)",
+          "Horizontal overflow hunting on 390px viewports",
+        ],
+      },
+    ],
+  },
+  {
+    section: "4. React",
     tier: "Very High",
     groups: [
       {
@@ -385,134 +337,7 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "6. UI/UX and Accessibility",
-    tier: "High",
-    groups: [
-      {
-        subsection: "UX",
-        items: [
-          "Visual hierarchy: one primary action per view",
-          "Fitts's law: make frequent targets big and close",
-          "Hick's law: fewer choices, clearer defaults",
-          "Empty, loading, and error states as first-class design",
-          "Optimistic UI vs. waiting vs. skeletons — pick on purpose",
-          "Undo is better than a confirm dialog for reversible acts",
-          "Toast vs. inline error vs. page-level alert",
-          "Forms: labels, help text, errors next to fields",
-          "Progressive disclosure: hide advanced until needed",
-          "Mobile-first: thumbs, not hover",
-          "Don't block paste on password fields",
-          "Copy that uses verbs and names the object",
-        ],
-      },
-      {
-        subsection: "Accessibility",
-        items: [
-          "WCAG 2.2 AA as the bar, not a stretch goal",
-          "Semantic HTML is 80% of a11y",
-          "Keyboard: tab order, skip link, no keyboard traps",
-          "Focus visible always; don't outline: none without a replacement",
-          "ARIA roles, states, properties — only when HTML is not enough",
-          "Accessible names: label, aria-label, aria-labelledby",
-          "Live regions for async updates (polite vs. assertive)",
-          "Images: meaningful alt, decorative alt='', never missing",
-          "Color contrast (text and UI components)",
-          "Don't convey meaning by color alone",
-          "Motion: respect prefers-reduced-motion",
-          "Form errors announced and associated with fields",
-          "Modals: focus trap, return focus, Escape to close, aria-modal",
-          "Screen reader testing: VoiceOver or NVDA once per feature",
-          "axe / eslint-plugin-jsx-a11y in CI",
-        ],
-      },
-    ],
-  },
-  {
-    section: "7. REST APIs and HTTP",
-    tier: "Very High",
-    groups: [
-      {
-        subsection: "HTTP",
-        items: [
-          "URL anatomy: scheme, host, path, query, fragment",
-          "DNS, TCP, TLS, HTTP — the request journey",
-          "HTTP/1.1 vs. HTTP/2 vs. HTTP/3 at a practical level",
-          "Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
-          "Idempotency and safety of methods",
-          "Status codes: 2xx, 3xx, 4xx, 5xx you will actually use",
-          "Headers: Content-Type, Accept, Authorization, Cache-Control, ETag, Cookie",
-          "CORS: simple vs. preflight, credentials, allowed origins",
-          "Redirects: 301/302/307/308 and method preservation",
-          "Content negotiation and charset",
-          "Cookies: Expires, Max-Age, Domain, Path, Secure, HttpOnly, SameSite",
-          "Compression: gzip, br, and why you don't gzip twice",
-        ],
-      },
-      {
-        subsection: "REST Design",
-        items: [
-          "Resources as nouns, not verbs, in URLs",
-          "Plural collections: /items, /items/:id",
-          "Query params for filter, sort, pagination — not a second RPC",
-          "Request and response JSON shapes that stay boring",
-          "Pagination: offset vs. cursor, total counts, Link headers",
-          "Filtering, sorting, sparse fieldsets",
-          "Versioning: URL vs. header vs. don't until you must",
-          "Error body: machine code + human message + field errors",
-          "Idempotency keys for payments and POSTs that retry",
-          "HATEOAS awareness (know it; don't overbuild it)",
-          "Webhooks vs. polling vs. SSE vs. WebSockets — pick per job",
-          "Rate limiting headers and 429 with Retry-After",
-          "OpenAPI and Swagger Basics",
-          "Postman / Insomnia / httpie / curl as daily tools",
-          "Contract tests against the OpenAPI spec",
-        ],
-      },
-    ],
-  },
-  {
-    section: "8. Validation and Error Handling",
-    tier: "Very High",
-    groups: [
-      {
-        subsection: "Validation",
-        items: [
-          "Validate at the boundary: user input, query params, env, webhooks",
-          "Never trust the client: server re-validates always",
-          "Schema-first with Zod (or Yup/Valibot) shared where it is safe",
-          "Required vs. optional vs. nullable — three different things",
-          "String limits, trimming, empty-string vs. missing",
-          "Numbers: int vs. float, min/max, NaN",
-          "Enums and literal unions instead of free-text statuses",
-          "Emails, URLs, UUIDs: use the library, not a cute regex",
-          "Dates: ISO-8601, timezones, and 'is this in the future?'",
-          "Nested objects and arrays: min length, unique items",
-          "Cross-field rules (password confirm, start < end)",
-          "File uploads: type, size, and don't trust the extension",
-          "Normalize then validate (lowercase email, trim)",
-          "Return field-level errors the UI can place",
-        ],
-      },
-      {
-        subsection: "Error Handling",
-        items: [
-          "Expected vs. unexpected errors (domain vs. bugs)",
-          "HTTP mapping: 400 validation, 401 auth, 403 forbidden, 404, 409 conflict, 429, 500",
-          "Don't leak stack traces to clients",
-          "Central error middleware / handler on the server",
-          "Error.cause and wrapping without losing the original",
-          "Result types vs. throw — pick a house style and keep it",
-          "Retries: only idempotent, with backoff and jitter",
-          "Timeouts on every outbound call",
-          "User-facing copy: what happened, what to do next",
-          "Logging errors with request id / correlation id",
-          "Crash vs. isolate: unhandledRejection, render error boundaries",
-        ],
-      },
-    ],
-  },
-  {
-    section: "9. Next.js",
+    section: "5. Next.js",
     tier: "Very High",
     groups: [
       {
@@ -561,7 +386,7 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "10. Backend and Node.js",
+    section: "2. Backend and Node.js",
     tier: "Very High",
     groups: [
       {
@@ -615,7 +440,50 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "11. PostgreSQL",
+    section: "7. REST APIs and HTTP",
+    tier: "Very High",
+    groups: [
+      {
+        subsection: "HTTP",
+        items: [
+          "URL anatomy: scheme, host, path, query, fragment",
+          "DNS, TCP, TLS, HTTP — the request journey",
+          "HTTP/1.1 vs. HTTP/2 vs. HTTP/3 at a practical level",
+          "Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
+          "Idempotency and safety of methods",
+          "Status codes: 2xx, 3xx, 4xx, 5xx you will actually use",
+          "Headers: Content-Type, Accept, Authorization, Cache-Control, ETag, Cookie",
+          "CORS: simple vs. preflight, credentials, allowed origins",
+          "Redirects: 301/302/307/308 and method preservation",
+          "Content negotiation and charset",
+          "Cookies: Expires, Max-Age, Domain, Path, Secure, HttpOnly, SameSite",
+          "Compression: gzip, br, and why you don't gzip twice",
+        ],
+      },
+      {
+        subsection: "REST Design",
+        items: [
+          "Resources as nouns, not verbs, in URLs",
+          "Plural collections: /items, /items/:id",
+          "Query params for filter, sort, pagination — not a second RPC",
+          "Request and response JSON shapes that stay boring",
+          "Pagination: offset vs. cursor, total counts, Link headers",
+          "Filtering, sorting, sparse fieldsets",
+          "Versioning: URL vs. header vs. don't until you must",
+          "Error body: machine code + human message + field errors",
+          "Idempotency keys for payments and POSTs that retry",
+          "HATEOAS awareness (know it; don't overbuild it)",
+          "Webhooks vs. polling vs. SSE vs. WebSockets — pick per job",
+          "Rate limiting headers and 429 with Retry-After",
+          "OpenAPI and Swagger Basics",
+          "Postman / Insomnia / httpie / curl as daily tools",
+          "Contract tests against the OpenAPI spec",
+        ],
+      },
+    ],
+  },
+  {
+    section: "8. PostgreSQL",
     tier: "Very High",
     groups: [
       {
@@ -668,7 +536,7 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "12. Prisma",
+    section: "9. Prisma",
     tier: "Very High",
     groups: [
       {
@@ -707,7 +575,7 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "13. Authentication and Authorization",
+    section: "3. Authentication and Authorization",
     tier: "Very High",
     groups: [
       {
@@ -747,7 +615,86 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "14. Testing",
+    section: "11. Web Security",
+    tier: "High",
+    groups: [
+      {
+        subsection: "OWASP Top Class",
+        items: [
+          "XSS: HTML injection, attribute, JS context — encode/escape per context",
+          "CSP as defense in depth, not the only door",
+          "CSRF: cookies and state-changing requests",
+          "SQL injection: parameterized queries only, always",
+          "Command injection: never interpolate into a shell",
+          "Path traversal and file download endpoints",
+          "SSRF: don't fetch user URLs without an allowlist",
+          "Open redirects",
+          "Clickjacking: X-Frame-Options / frame-ancestors",
+          "Insecure deserialization",
+          "Using components with known vulnerabilities (audit, dependabot)",
+          "Broken access control (the #1 real-world bug)",
+        ],
+      },
+      {
+        subsection: "Hardening",
+        items: [
+          "HTTPS only, Secure cookies, HSTS",
+          "Security headers: CSP, Referrer-Policy, Permissions-Policy, X-Content-Type-Options",
+          "CORS least privilege, never * with credentials",
+          "Rate limiting and lockout on auth",
+          "Secrets: env, not git; rotate when leaked",
+          "Principle of least privilege on cloud keys",
+          "Dependency pinning and npm audit in CI (with judgment)",
+          "File upload: store outside web root / in object storage, random names, scan size/type",
+          "Don't roll your own crypto",
+          "Threat model a feature in one paragraph before you build it",
+        ],
+      },
+    ],
+  },
+  {
+    section: "4. Validation and Error Handling",
+    tier: "Very High",
+    groups: [
+      {
+        subsection: "Validation",
+        items: [
+          "Validate at the boundary: user input, query params, env, webhooks",
+          "Never trust the client: server re-validates always",
+          "Schema-first with Zod (or Yup/Valibot) shared where it is safe",
+          "Required vs. optional vs. nullable — three different things",
+          "String limits, trimming, empty-string vs. missing",
+          "Numbers: int vs. float, min/max, NaN",
+          "Enums and literal unions instead of free-text statuses",
+          "Emails, URLs, UUIDs: use the library, not a cute regex",
+          "Dates: ISO-8601, timezones, and 'is this in the future?'",
+          "Nested objects and arrays: min length, unique items",
+          "Cross-field rules (password confirm, start < end)",
+          "File uploads: type, size, and don't trust the extension",
+          "Normalize then validate (lowercase email, trim)",
+          "Return field-level errors the UI can place",
+        ],
+      },
+      {
+        subsection: "Error Handling",
+        items: [
+          "Expected vs. unexpected errors (domain vs. bugs)",
+          "HTTP mapping: 400 validation, 401 auth, 403 forbidden, 404, 409 conflict, 429, 500",
+          "Don't leak stack traces to clients",
+          "Central error middleware / handler on the server",
+          "Error.cause and wrapping without losing the original",
+          "Result types vs. throw — pick a house style and keep it",
+          "Retries: only idempotent, with backoff and jitter",
+          "Timeouts on every outbound call",
+          "User-facing copy: what happened, what to do next",
+          "Logging errors with request id / correlation id",
+          "Crash vs. isolate: unhandledRejection, render error boundaries",
+        ],
+      },
+    ],
+  },
+  {
+    section: "13. Testing",
     tier: "High",
     groups: [
       {
@@ -790,7 +737,7 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "15. Git and GitHub",
+    section: "14. Git and GitHub",
     tier: "High",
     groups: [
       {
@@ -830,7 +777,7 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "16. Docker",
+    section: "15. Docker",
     tier: "High",
     groups: [
       {
@@ -856,7 +803,7 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "17. Linux and VPS",
+    section: "5. Linux and VPS",
     tier: "High",
     groups: [
       {
@@ -896,7 +843,7 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "18. Deployment and Production",
+    section: "17. Deployment and Production",
     tier: "High",
     groups: [
       {
@@ -932,45 +879,7 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "19. Web Security",
-    tier: "High",
-    groups: [
-      {
-        subsection: "OWASP Top Class",
-        items: [
-          "XSS: HTML injection, attribute, JS context — encode/escape per context",
-          "CSP as defense in depth, not the only door",
-          "CSRF: cookies and state-changing requests",
-          "SQL injection: parameterized queries only, always",
-          "Command injection: never interpolate into a shell",
-          "Path traversal and file download endpoints",
-          "SSRF: don't fetch user URLs without an allowlist",
-          "Open redirects",
-          "Clickjacking: X-Frame-Options / frame-ancestors",
-          "Insecure deserialization",
-          "Using components with known vulnerabilities (audit, dependabot)",
-          "Broken access control (the #1 real-world bug)",
-        ],
-      },
-      {
-        subsection: "Hardening",
-        items: [
-          "HTTPS only, Secure cookies, HSTS",
-          "Security headers: CSP, Referrer-Policy, Permissions-Policy, X-Content-Type-Options",
-          "CORS least privilege, never * with credentials",
-          "Rate limiting and lockout on auth",
-          "Secrets: env, not git; rotate when leaked",
-          "Principle of least privilege on cloud keys",
-          "Dependency pinning and npm audit in CI (with judgment)",
-          "File upload: store outside web root / in object storage, random names, scan size/type",
-          "Don't roll your own crypto",
-          "Threat model a feature in one paragraph before you build it",
-        ],
-      },
-    ],
-  },
-  {
-    section: "20. Performance and Scalability",
+    section: "18. Performance and Scalability",
     tier: "High",
     groups: [
       {
@@ -1002,6 +911,97 @@ export const ROADMAP = [
           "Horizontal scale requires stateless app servers",
           "Read replicas conceptually; don't jump there first",
           "Load testing with a realistic mix, not 10k GET /",
+        ],
+      },
+    ],
+  },
+  {
+    section: "6. UI, UX, and Accessibility",
+    tier: "High",
+    groups: [
+      {
+        subsection: "UX",
+        items: [
+          "Visual hierarchy: one primary action per view",
+          "Fitts's law: make frequent targets big and close",
+          "Hick's law: fewer choices, clearer defaults",
+          "Empty, loading, and error states as first-class design",
+          "Optimistic UI vs. waiting vs. skeletons — pick on purpose",
+          "Undo is better than a confirm dialog for reversible acts",
+          "Toast vs. inline error vs. page-level alert",
+          "Forms: labels, help text, errors next to fields",
+          "Progressive disclosure: hide advanced until needed",
+          "Mobile-first: thumbs, not hover",
+          "Don't block paste on password fields",
+          "Copy that uses verbs and names the object",
+        ],
+      },
+      {
+        subsection: "Accessibility",
+        items: [
+          "WCAG 2.2 AA as the bar, not a stretch goal",
+          "Semantic HTML is 80% of a11y",
+          "Keyboard: tab order, skip link, no keyboard traps",
+          "Focus visible always; don't outline: none without a replacement",
+          "ARIA roles, states, properties — only when HTML is not enough",
+          "Accessible names: label, aria-label, aria-labelledby",
+          "Live regions for async updates (polite vs. assertive)",
+          "Images: meaningful alt, decorative alt='', never missing",
+          "Color contrast (text and UI components)",
+          "Don't convey meaning by color alone",
+          "Motion: respect prefers-reduced-motion",
+          "Form errors announced and associated with fields",
+          "Modals: focus trap, return focus, Escape to close, aria-modal",
+          "Screen reader testing: VoiceOver or NVDA once per feature",
+          "axe / eslint-plugin-jsx-a11y in CI",
+        ],
+      },
+    ],
+  },
+  {
+    section: "20. Supporting Tools",
+    tier: null,
+    groups: [
+      {
+        subsection: "Editor",
+        items: [
+          "VS Code (or equivalent) as daily driver",
+          "Command palette, multi-cursor, and jump-to-definition",
+          "Format on save with a project formatter",
+          "EditorConfig so tabs/newlines match the repo",
+          "Emmet for HTML/CSS, then knowing when to stop",
+          "Snippets for the few patterns you actually type",
+          "Integrated terminal and tasks",
+          "Extensions: ESLint, Prettier, Tailwind IntelliSense, Prisma, Pretty TS Errors",
+          "Disable noisy extensions; keep the editor fast",
+        ],
+      },
+      {
+        subsection: "Browser DevTools",
+        items: [
+          "Elements panel: inspect, force state, edit HTML/CSS live",
+          "Computed styles vs. authored styles",
+          "Box model overlay and grid/flex inspector",
+          "Console: log, table, assert, copy, $0",
+          "Network: waterfall, headers, preview, disable cache, throttling",
+          "Application: cookies, local/session storage, cache storage",
+          "Sources: breakpoints, conditional breakpoints, blackboxing",
+          "Performance panel: record, FPS, long tasks",
+          "Lighthouse and what each category actually means",
+          "Accessibility tree and contrast checker",
+          "Responsive design mode and device emulation caveats",
+        ],
+      },
+      {
+        subsection: "Package Managers and CLI",
+        items: [
+          "npm vs. pnpm vs. yarn — lockfiles and why they matter",
+          "package.json scripts, engines, and sideEffects",
+          "npx / pnpx for one-off tools",
+          "Semver: caret, tilde, exact, and peer dependencies",
+          "Updating deps without surprise major bumps",
+          "Reading a README and changelog before adding a library",
+          "Why not to commit node_modules",
         ],
       },
     ],
@@ -1071,7 +1071,7 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "23. Professional and Interview Skills",
+    section: "7. Professional and Interview Skills",
     tier: null,
     groups: [
       {
@@ -1166,7 +1166,7 @@ export const ROADMAP = [
     ],
   },
   {
-    section: "26. Job Readiness Criteria",
+    section: "8. Job Readiness Criteria",
     tier: null,
     groups: [
       {

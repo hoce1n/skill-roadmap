@@ -37,7 +37,7 @@ const inserts = rows.map(
     `insert into items (id, section, subsection, sort_order, title, priority_tier, checked, notes, links) values ('${row.id}', '${esc(row.section)}', ${sqlNull(row.subsection)}, ${row.sortOrder}, '${esc(row.title)}', ${sqlNull(row.tier)}, false, '', '[]'::jsonb);`,
 );
 
-const sql = `-- Seed: ${rows.length} checklist items from the skill roadmap (sections 1–24 and 26).
+const sql = `-- Seed: ${rows.length} checklist items from the skill roadmap (the imported source sections).
 -- sort_order is original file order. Section 25 is not imported.
 
 ${inserts.join("\n")}
